@@ -1,6 +1,6 @@
 /**
  * Lahore Spine Care - Dr. Shiza Khan
- * Main JavaScript Interactivity
+ * Main JavaScript Interactivity & Mobile Optimizations
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -9,12 +9,33 @@ document.addEventListener('DOMContentLoaded', () => {
     window.lucide.createIcons();
   }
 
-  // Mobile Menu Toggle
+  // Mobile Menu Toggle & Auto-Close Setup
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
+  
   if (mobileMenuBtn && mobileMenu) {
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
+    mobileMenuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isHidden = mobileMenu.classList.contains('hidden');
+      if (isHidden) {
+        mobileMenu.classList.remove('hidden');
+      } else {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+
+    // Close mobile menu when clicking any link inside it
+    mobileMenu.querySelectorAll('a, button[data-open-modal]').forEach(item => {
+      item.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+        mobileMenu.classList.add('hidden');
+      }
     });
   }
 

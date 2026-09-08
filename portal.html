@@ -24,82 +24,142 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="bg-white text-slate-900 font-sans antialiased selection:bg-teal-500 selection:text-white">
+<body class="bg-white text-slate-900 font-sans antialiased selection:bg-teal-500 selection:text-white overflow-x-hidden">
 
-  <!-- ==================== 1. TOP HEADER BAR ==================== -->
-  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-200">
-    <div class="bg-slate-900 text-white text-xs py-2.5 px-4 sm:px-6 lg:px-8">
-      <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
-        <div class="flex items-center space-x-3 sm:space-x-6 overflow-hidden">
-          <span class="flex items-center space-x-1.5 truncate">
-            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-sky-400 shrink-0"></i>
-            <span class="text-slate-300 truncate">Kamahan - Lidher Road, Formanites Society Gate, Lahore</span>
-          </span>
-          <span class="hidden md:flex items-center space-x-1.5 border-l border-slate-700 pl-6 shrink-0">
-            <i data-lucide="phone" class="w-3.5 h-3.5 text-teal-400 shrink-0"></i>
-            <a href="tel:+923340043512" class="hover:text-sky-300 font-medium">0334 0043512</a>
-          </span>
+    <!-- ==================== 1. TOP HEADER BAR ==================== -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-200 w-full overflow-hidden">
+    <!-- Top Contact & Social Bar -->
+    <div class="bg-slate-900 text-white text-xs py-2 px-3 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
+        <div class="flex items-center space-x-2 min-w-0 overflow-hidden">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-sky-400 shrink-0"></i>
+          <span class="text-slate-300 truncate text-[10px] sm:text-xs font-medium">Kamahan - Lidher Road, Formanites Society Gate, Lahore</span>
         </div>
-        <div class="flex items-center space-x-3 text-slate-400 shrink-0">
-          <a href="https://www.facebook.com/DrShizaKhanMedicalCenter" target="_blank" rel="noopener noreferrer" class="hover:text-sky-400 transition-colors" title="Facebook"><i data-lucide="facebook" class="w-3.5 h-3.5"></i></a>
-          <a href="https://www.instagram.com/drshizakhanmedicalcenter" target="_blank" rel="noopener noreferrer" class="hover:text-pink-400 transition-colors" title="Instagram"><i data-lucide="instagram" class="w-3.5 h-3.5"></i></a>
-          <a href="https://tiktok.com/@drshizakhan" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" title="TikTok"><i data-lucide="video" class="w-3.5 h-3.5"></i></a>
-          <a href="https://www.youtube.com/c/DrShizaKhanMedicalCenter" target="_blank" rel="noopener noreferrer" class="hover:text-red-500 transition-colors" title="YouTube"><i data-lucide="youtube" class="w-3.5 h-3.5"></i></a>
+        <div class="flex items-center space-x-2 shrink-0">
+          <a href="tel:+923340043512" class="flex items-center space-x-1 text-teal-400 font-bold text-[10px] sm:text-xs bg-slate-800 hover:bg-slate-700 px-2 py-1 rounded-md transition-colors">
+            <i data-lucide="phone" class="w-3 h-3 text-teal-400"></i>
+            <span>0334 0043512</span>
+          </a>
+          <div class="hidden sm:flex items-center space-x-2.5 text-slate-400 border-l border-slate-700 pl-3">
+            <a href="https://www.facebook.com/DrShizaKhanMedicalCenter" target="_blank" rel="noopener noreferrer" class="hover:text-sky-400 transition-colors" title="Facebook"><i data-lucide="facebook" class="w-3.5 h-3.5"></i></a>
+            <a href="https://www.instagram.com/drshizakhanmedicalcenter" target="_blank" rel="noopener noreferrer" class="hover:text-pink-400 transition-colors" title="Instagram"><i data-lucide="instagram" class="w-3.5 h-3.5"></i></a>
+            <a href="https://tiktok.com/@drshizakhan" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" title="TikTok"><i data-lucide="video" class="w-3.5 h-3.5"></i></a>
+            <a href="https://www.youtube.com/c/DrShizaKhanMedicalCenter" target="_blank" rel="noopener noreferrer" class="hover:text-red-500 transition-colors" title="YouTube"><i data-lucide="youtube" class="w-3.5 h-3.5"></i></a>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
-      <a href="index.html" class="flex items-center space-x-3 shrink-0 group">
-        <div class="w-11 h-11 bg-gradient-to-br from-sky-500 to-teal-600 rounded-xl flex items-center justify-center text-white shadow-md shadow-sky-500/20 group-hover:scale-105 transition-transform shrink-0">
-          <svg class="w-6 h-6 fill-none stroke-current stroke-2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Main Navigation Bar -->
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2">
+      <!-- Brand Logo (Lahore Spine Care - Dr. Shiza Khan) -->
+      <a href="index.html" class="flex items-center space-x-2 sm:space-x-3 min-w-0 shrink group">
+        <div class="w-9 h-9 sm:w-11 sm:h-11 bg-gradient-to-br from-sky-500 to-teal-600 rounded-xl flex items-center justify-center text-white shadow-md shadow-sky-500/20 group-hover:scale-105 transition-transform shrink-0">
+          <svg class="w-5 h-5 sm:w-6 sm:h-6 fill-none stroke-current stroke-2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
             <path d="M12 2v20M8 5h8M7 9h10M8 13h8M9 17h6M10 21h4" />
           </svg>
         </div>
-        <div class="flex flex-col">
-          <span class="text-xl sm:text-2xl font-extrabold tracking-tight text-slate-900 leading-none">Lahore Spine Care<span class="text-sky-500">.</span></span>
-          <span class="text-[11px] font-bold tracking-wider text-teal-600 uppercase mt-0.5">Dr. Shiza Khan</span>
+        <div class="flex flex-col min-w-0">
+          <span class="text-sm sm:text-xl lg:text-2xl font-extrabold tracking-tight text-slate-900 leading-none truncate">Lahore Spine Care<span class="text-sky-500">.</span></span>
+          <span class="text-[9px] sm:text-[11px] font-bold tracking-wider text-teal-600 uppercase mt-0.5 truncate">Dr. Shiza Khan</span>
         </div>
       </a>
 
-      <nav class="hidden lg:flex items-center space-x-8">
+      <!-- Center Desktop Nav Links -->
+      <nav class="hidden lg:flex items-center space-x-6 xl:space-x-8">
+        <a href="index.html" class="text-sm font-medium text-slate-600 hover:text-sky-600 transition-colors">Home</a>
         <a href="services.html" class="text-sm font-medium text-slate-600 hover:text-sky-600 transition-colors">Services</a>
-        <a href="home-care.html" class="text-sm font-medium text-slate-600 hover:text-sky-600 transition-colors">Care+</a>
+        <a href="home-care.html" class="text-sm font-medium text-slate-600 hover:text-sky-600 transition-colors">Home Care</a>
         <a href="chiropractic.html" class="text-sm font-medium text-slate-600 hover:text-sky-600 transition-colors">Chiropractic</a>
         <a href="packages.html" class="text-sm font-medium text-slate-600 hover:text-sky-600 transition-colors">Packages</a>
         <a href="blog.html" class="text-sm font-medium text-slate-600 hover:text-sky-600 transition-colors">Blog</a>
-        <a href="about.html" class="text-sm font-medium text-slate-600 hover:text-sky-600 transition-colors">About</a>
+        <a href="about.html" class="text-sm font-medium text-slate-600 hover:text-sky-600 transition-colors">About Dr. Shiza</a>
       </nav>
 
-      <div class="flex items-center space-x-2 sm:space-x-4 shrink-0">
-        <button data-open-modal="search" class="p-2.5 text-slate-600 hover:text-sky-600 hover:bg-slate-50 rounded-xl transition-all" title="Search">
-          <i data-lucide="search" class="w-5 h-5"></i>
+      <!-- Right Utilities & CTA -->
+      <div class="flex items-center space-x-1 sm:space-x-3 shrink-0">
+        <!-- Search Button -->
+        <button data-open-modal="search" class="p-2 sm:p-2.5 text-slate-600 hover:text-sky-600 hover:bg-slate-50 rounded-xl transition-all" title="Search">
+          <i data-lucide="search" class="w-4 h-4 sm:w-5 sm:h-5"></i>
         </button>
-        <button data-open-modal="cart" class="relative p-2.5 text-slate-600 hover:text-sky-600 hover:bg-slate-50 rounded-xl transition-all" title="Care Cart">
-          <i data-lucide="shopping-bag" class="w-5 h-5"></i>
-          <span id="cart-count" class="absolute top-1 right-1 w-4 h-4 bg-sky-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center">0</span>
+
+        <!-- Cart Button -->
+        <button data-open-modal="cart" class="relative p-2 sm:p-2.5 text-slate-600 hover:text-sky-600 hover:bg-slate-50 rounded-xl transition-all" title="Care Cart">
+          <i data-lucide="shopping-bag" class="w-4 h-4 sm:w-5 sm:h-5"></i>
+          <span id="cart-count" class="absolute top-1 right-1 w-3.5 h-3.5 sm:w-4 sm:h-4 bg-sky-500 text-white text-[9px] sm:text-[10px] font-bold rounded-full flex items-center justify-center">0</span>
         </button>
-        <button data-open-modal="portal" class="hidden sm:inline-flex items-center space-x-2 px-3.5 py-2.5 rounded-xl border border-sky-500 text-sky-600 hover:bg-sky-50 font-semibold text-xs uppercase tracking-wider transition-all">
-          <i data-lucide="user" class="w-4 h-4 text-sky-500"></i>
+
+        <!-- Portal Button -->
+        <button data-open-modal="portal" class="hidden md:inline-flex items-center space-x-1.5 px-3 py-2 rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-slate-300 font-semibold text-xs uppercase tracking-wider transition-all">
+          <i data-lucide="user" class="w-3.5 h-3.5 text-sky-500"></i>
           <span>Portal</span>
         </button>
-        <button data-open-modal="booking" class="inline-flex items-center justify-center px-4 sm:px-5 py-2.5 rounded-xl bg-sky-600 hover:bg-sky-700 text-white font-semibold text-xs sm:text-sm shadow-md shadow-sky-600/25 hover:shadow-lg transition-all transform active:scale-95">
+
+        <!-- Book Appointment Primary Button (Visible on sm+; on xs, available in mobile menu) -->
+        <button data-open-modal="booking" class="hidden sm:inline-flex items-center justify-center px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl bg-sky-600 hover:bg-sky-700 text-white font-semibold text-xs sm:text-sm shadow-md shadow-sky-600/25 hover:shadow-lg transition-all transform active:scale-95 whitespace-nowrap">
           <span>Book Appointment</span>
         </button>
-        <button id="mobile-menu-btn" class="lg:hidden p-2 text-slate-600 hover:text-slate-900 rounded-lg focus:outline-none">
-          <i data-lucide="menu" class="w-6 h-6"></i>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" class="lg:hidden p-2 text-slate-700 hover:text-slate-900 hover:bg-slate-100 rounded-xl focus:outline-none transition-colors" aria-label="Toggle navigation">
+          <i data-lucide="menu" class="w-5 h-5 sm:w-6 sm:h-6"></i>
         </button>
       </div>
     </div>
 
-    <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-100 bg-white px-4 pt-3 pb-6 space-y-3 shadow-lg">
-      <a href="services.html" class="block py-2 text-base font-medium text-slate-700 hover:text-sky-600">Services</a>
-      <a href="home-care.html" class="block py-2 text-base font-medium text-slate-700 hover:text-sky-600">Care+ Visits</a>
-      <a href="chiropractic.html" class="block py-2 text-base font-medium text-slate-700 hover:text-sky-600">Chiropractic Spine Adjustment</a>
-      <a href="packages.html" class="block py-2 text-base font-medium text-slate-700 hover:text-sky-600">Care Packages</a>
-      <a href="blog.html" class="block py-2 text-base font-medium text-slate-700 hover:text-sky-600">Blog & Health Advice</a>
-      <a href="about.html" class="block py-2 text-base font-medium text-slate-700 hover:text-sky-600">About Khan</a>
-      <a href="portal.html" class="block py-2 text-base font-medium text-sky-600">Patient Portal</a>
+    <!-- Mobile Dropdown Nav -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-100 bg-white px-4 pt-3 pb-6 space-y-4 shadow-xl max-h-[85vh] overflow-y-auto">
+      <div class="space-y-1">
+        <a href="index.html" class="flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-semibold text-slate-800 hover:bg-sky-50 hover:text-sky-600 transition-colors">
+          <span>Home</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+        </a>
+        <a href="services.html" class="flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-semibold text-slate-800 hover:bg-sky-50 hover:text-sky-600 transition-colors">
+          <span>Services & Treatments</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+        </a>
+        <a href="home-care.html" class="flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-semibold text-slate-800 hover:bg-sky-50 hover:text-sky-600 transition-colors">
+          <span>Home Care Visits</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+        </a>
+        <a href="chiropractic.html" class="flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-semibold text-slate-800 hover:bg-sky-50 hover:text-sky-600 transition-colors">
+          <span>Chiropractic Spine Adjustment</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+        </a>
+        <a href="packages.html" class="flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-semibold text-slate-800 hover:bg-sky-50 hover:text-sky-600 transition-colors">
+          <span>Care Packages & Pricing</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+        </a>
+        <a href="blog.html" class="flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-semibold text-slate-800 hover:bg-sky-50 hover:text-sky-600 transition-colors">
+          <span>Spine Health Blog</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+        </a>
+        <a href="about.html" class="flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-semibold text-slate-800 hover:bg-sky-50 hover:text-sky-600 transition-colors">
+          <span>About Dr. Shiza Khan</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+        </a>
+        <a href="portal.html" class="flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-semibold text-sky-600 hover:bg-sky-50 transition-colors">
+          <span>Patient Portal Login</span>
+          <i data-lucide="user" class="w-4 h-4 text-sky-500"></i>
+        </a>
+      </div>
+
+      <div class="pt-3 border-t border-slate-100 space-y-3">
+        <button data-open-modal="booking" class="w-full py-3 rounded-xl bg-sky-600 text-white font-bold text-sm shadow-md shadow-sky-600/25 flex items-center justify-center space-x-2">
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+          <span>Book Appointment (Rs. 2,000)</span>
+        </button>
+        <div class="grid grid-cols-2 gap-2 text-center text-xs">
+          <a href="tel:03340043512" class="p-2.5 bg-slate-100 text-slate-800 font-bold rounded-xl flex items-center justify-center space-x-1">
+            <i data-lucide="phone" class="w-3.5 h-3.5 text-teal-600"></i>
+            <span>Call Clinic</span>
+          </a>
+          <a href="https://wa.me/923340043512" target="_blank" rel="noopener noreferrer" class="p-2.5 bg-emerald-50 text-emerald-700 font-bold rounded-xl flex items-center justify-center space-x-1">
+            <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-600"></i>
+            <span>WhatsApp</span>
+          </a>
+        </div>
+      </div>
     </div>
   </header>
 
